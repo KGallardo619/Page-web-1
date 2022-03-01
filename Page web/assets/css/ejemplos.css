@@ -1,0 +1,42 @@
+/*Selecor de clase*/
+.cliente{
+    color:cornflowerblue;
+}
+
+/*Selector por id*/
+#cliente{
+    color:rosybrown;
+}
+
+/*Selector por atributo*/
+[src="logo.jpg"]{
+    color:thistle;
+}
+
+/*Selector por elemento*/
+h1{
+    color: teal;
+}
+
+/*Selector por combinacion decendente*/
+.cliente.nombre{
+    color: slategray;
+}
+/*Selector para todos los hijos*/
+.cliente > p{
+    color:royalblue;
+}
+/*Especifidad*/
+p{
+    color: red;
+}
+p.parrafo{
+    color: royalblue;
+}
+/*Colores*/
+/*Nombre
+color:red"*/
+
+/*Hexadecimal*/
+
+/*RGB*/
