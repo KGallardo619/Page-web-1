@@ -1,0 +1,304 @@
+/*h1 {
+    text-align: center;
+    color: rgb(20, 30, 48);
+    font-size: 50px;
+    
+}
+*/
+/*Declaración de paleta de colores */
+:root{
+    --blanco:#ffffff;
+    --oscuro: #000000;
+    --primario:#9ed8ff;
+    --secundario: hsl(186, 100%, 33%);
+    --gris:#808080;
+    
+}
+/*es el tipo de letra o familia de tipos de letra es el tipo de letra que se aplicará al cuerpo de texto en un navegador*/
+
+html
+{
+    font-size: 62.5%;
+    box-sizing: border-box; /*Box Model*/
+    scroll-snap-type: y mandatory; ;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Tamaño de letra del body*/
+body{
+    font-size: 16px;/*tamaño de letra en px [valor fijo]*/
+    font-family:'Krub', sams-serif;
+    background-image: linear-gradient(to top, var(--morado), 0%, var(--primario) 100%);
+
+}
+/*Establecer caracteristicas para el titulo*/
+.titulo{
+    text-align: center;
+    font-size:3.8rem;
+    color:steelblue;
+
+    font-family: 'Comforter', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*Establecer caracteristicas para la categoria span del titulo*/
+h1{
+    text-align: center; /*posición del texto*/
+    font-size: 3.8rem;; /*tamaño del texto*/
+    color: aquamarine;
+}
+h2
+{
+    font-size: 2.8rem;
+}
+
+h3
+{
+    font-size: 1.8rem;
+}
+
+/*Establecer caracteristicas para todas las etiquetas span*/
+span{
+    font-size: 50px;
+    color: darkcyan;
+
+}
+/*Establecer el color del banner*/
+.nav-bg
+{
+    background-color: var(--secundario);
+}
+/*El área de padding es el espacio entre el contenido del elemento y su borde*/
+.navegacion-principal
+{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    
+}
+/*Declaracion de las letras*/
+.navegacion-principal a 
+{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+    padding:1 rem;
+}
+/*Contenedor del banner*/
+.contenedor
+{
+    width: 100rem;
+    margin: 0 auto;
+}
+
+.navegacion-principal a:hover{
+
+    background-color: var(--primario);
+}
+
+@media (min-with:768px)
+{
+    .navegacion-principal
+    {
+    flex-direction: row;
+    justify-content: space-between;
+    }
+}
+
+.hero
+{
+    background-image: url(/assets/images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+
+}
+
+.Contenido-hero{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.ubicacion
+{
+    display:flex;
+    align-items: flex-end;
+}
+
+.servicio,.navegacion-principal{
+    scroll-snap-align: center;
+    scroll-snap-stop:always;
+}
+
+/*Diseño del botón*/
+.boton
+{
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border-radius: 1rem;
+    width: 90%;
+    text-align: center;
+}
+@media(min-width: 768px)
+{
+    .boton
+    {     
+        width: auto;
+    }
+}
+
+*/
+.contenedor
+{
+    width:120rem;
+    margin:0 auto;
+}
+.sombra
+{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.67);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.67);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.67);
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+@media (min-width: 768px){
+.servicios{
+        display: grid;
+        grid-template-columns: repeat(3.1fr);
+        grid-template-columns: 1fr 1fr 1fr;
+        /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+        column-gap: 1rem;
+    }
+}
+
+
+.servicio
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3
+{
+    color: deepskyblue;
+    font-weight: normal;
+}
+.servicio .p{
+    line-height: 2;
+    text-align: center;
+} 
+
+.iconos
+{
+    height: 5rem;
+    width: 5rem;
+    background-color: rgba(32, 34, 34, 0.877);
+    border-radius: 50%;
+    display: flex; /*uno delante del otro*/
+    justify-content: space-evenly; /*alinear verticalmente*/
+    align-items: center; /*alinear*/
+}
+
+/*Contactos*/
+.formulario{
+    background-color: var(--gris);
+    width:(60 rem, 100%);
+}
+
+.formulario fieldset{
+    boder: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color:var(--primario);
+}
+
+/*Contenedor campos */
+@media(min-width:768px){
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto 20rem;
+        columns: 1rem;
+    }
+    
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom:5rem;
+    display: block;
+
+}
+
+.input-text{
+    width:100%;
+    border:none;
+    padding:1.5rem;
+    border-radius: 5rem;
+
+}
+.enviar .boton{
+    width: 100%;
+}
+
+.w-100{
+    background-color: var(--secundario);
+}
+
+@media(min-width: 768px){
+    .w-100{
+        width: auto;
+    }
+}
+
+.navegacion-principal{
+    display:flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex{
+    display:flex;
+}
+.aliniar-derecha{
+    justify-content: flex-end;
+}
+
+.campos:nth-child(3),
+.campos:nth-child(4){
+    grid-column: 1/3;
+}
+
