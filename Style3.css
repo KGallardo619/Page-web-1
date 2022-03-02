@@ -113,7 +113,7 @@ span{
 
 .hero
 {
-    background-image: url(/assets/images/banner.jpg);
+    background-image: url(banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
